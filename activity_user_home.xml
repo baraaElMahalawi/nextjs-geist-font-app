@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="#2290E9">
+
+        <TextView
+            android:id="@+id/tvUserHomeTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:text="Available Rooms"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnMyBookings"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="My Bookings"
+            android:textAllCaps="false"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#2290E9"
+            android:paddingStart="16dp"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter Rooms"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2290E9"
+            android:layout_marginBottom="12dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerRoomType"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:paddingStart="19dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/circle_button_background"
+                     />
+
+                <Spinner
+                    android:id="@+id/spinnerStars"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/circle_button_background"
+                    android:paddingStart="19dp"
+                    android:paddingEnd="12dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerPoolType"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/circle_button_background"
+                    android:paddingStart="19dp"
+                    android:paddingEnd="12dp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <CheckBox
+                android:id="@+id/checkboxWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WiFi"
+                android:textColor="#757575"
+                android:layout_marginEnd="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxParking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parking"
+                android:textColor="#757575"
+                android:layout_marginEnd="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast"
+                android:textColor="#757575" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNoRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No rooms available with selected filters"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="32dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewRooms"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
