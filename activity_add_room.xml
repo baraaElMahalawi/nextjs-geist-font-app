@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Room"
+                android:layout_centerInParent="true"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2290E9"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/etRoomNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room Number"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Type"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spRoomType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Rating"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spRoomStars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price per Night"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Details Image"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivRoomPreview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:background="#EEEEEE"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Details Image"
+                android:textAllCaps="false"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room List Image"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivListRoomPreview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:background="#EEEEEE"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btnSelectListImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select List Image"
+                android:textAllCaps="false"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etRoomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room View"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pool Type"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spPoolType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Features"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <CheckBox
+                android:id="@+id/cbParking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parking"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/cbAirportTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Airport Transfer"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/cbWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free WiFi"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/cbCoffeeMaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tea/Coffee Maker"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/cbBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bar"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/cbBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:backgroundTint="#616161"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btnAddRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Room"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
